@@ -131,7 +131,7 @@
             bool running = true;
             while (running)
             {
-                OutputHelper.CutsceneLog($"              Gold: {player.Gold} | Bag (Time Slow x{player.TimeSlowPotion}, Perception x{player.PerceptionLens}, Heal x{player.HpPotion})",99, ConsoleColor.Yellow);
+                OutputHelper.QuickLog($"              Gold: {player.Gold} | Bag (Time Slow x{player.TimeSlowPotion}, Perception x{player.PerceptionLens}, Heal x{player.HpPotion})", ConsoleColor.Yellow);
                 Cutscene.ShowBook(CutsceneImage.ItemBook, 19, 31);
 
                 Console.SetCursorPosition(40, 42);
