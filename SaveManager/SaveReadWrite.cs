@@ -58,6 +58,13 @@ namespace ConsoleRPGAdventure
                     {
                         writer.WriteLine($"{entry.Key}={entry.Value}");
                     }
+                    writer.WriteLine();
+
+                    writer.WriteLine("[CONVERTED_HEALING_AREAS]");
+                    foreach (var entry in saveData.ConvertedHealingAreas)
+                    {
+                        writer.WriteLine($"{entry.Key}={entry.Value}");
+                    }
                 }
 
                 return true;
@@ -165,6 +172,10 @@ namespace ConsoleRPGAdventure
                                 {
                                     saveData.ClearedEventAreas[key] = eventCleared;
                                 }
+                                break;
+
+                            case "CONVERTED_HEALING_AREAS":
+                                saveData.ConvertedHealingAreas[key] = value;
                                 break;
                         }
                     }

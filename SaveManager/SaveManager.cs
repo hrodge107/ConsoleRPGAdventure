@@ -38,6 +38,11 @@ namespace ConsoleRPGAdventure
                     {
                         bool isCleared = eventArea.Event == null;
                         saveData.ClearedEventAreas[areaData] = isCleared;
+
+                        if (eventArea.Event is HealingArea healingArea)
+                        {
+                            saveData.ConvertedHealingAreas[areaData] = healingArea.Message ?? string.Empty;
+                        }
                     }
                 }
 
@@ -102,11 +107,19 @@ namespace ConsoleRPGAdventure
                         bossArea.IsCleared = saveData.ClearedBossAreas[areaData];
                     }
 
-                    if (area is EventArea eventArea && saveData.ClearedEventAreas.ContainsKey(areaData))
+                    if (area is EventArea eventArea)
                     {
-                        if (saveData.ClearedEventAreas[areaData])
+                        if (saveData.ConvertedHealingAreas.ContainsKey(areaData))
                         {
-                            eventArea.Event = null; // <-- means cleared
+                            string healingMessage = saveData.ConvertedHealingAreas[areaData];
+                            eventArea.Event = new HealingArea(healingMessage);
+                        }
+                        else if (saveData.ClearedEventAreas.ContainsKey(areaData))
+                        {
+                            if (saveData.ClearedEventAreas[areaData])
+                            {
+                                eventArea.Event = null; // <-- means cleared
+                            }
                         }
                     }
                 }

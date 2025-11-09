@@ -145,7 +145,7 @@ namespace ConsoleRPGAdventure
 
     public class Bear : Enemy
     {
-        public Bear() : base(EntityImage.Bear, "Kuma", 88, (10, 12), (60, 70), (1, 3), (15, 25), 100) { }
+        public Bear() : base(EntityImage.Bear, "Kuma", 100, (10, 12), (60, 70), (1, 3), (15, 25), 100) { }
     }
     #endregion
 

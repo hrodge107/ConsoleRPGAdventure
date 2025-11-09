@@ -23,11 +23,13 @@ namespace ConsoleRPGAdventure
         // Cleared States 
         public Dictionary<string, bool> ClearedBossAreas { get; set; }
         public Dictionary<string, bool> ClearedEventAreas { get; set; }
+        public Dictionary<string, string> ConvertedHealingAreas { get; set; }
 
         public SaveData()
         {
             ClearedBossAreas = new Dictionary<string, bool>();
             ClearedEventAreas = new Dictionary<string, bool>();
+            ConvertedHealingAreas = new Dictionary<string, string>(); // <-- special healing areas
         }
 
         // => is shortcut for return
