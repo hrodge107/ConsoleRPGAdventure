@@ -109,8 +109,8 @@ namespace ConsoleRPGAdventure
 
         public override int GetAtkPower()
         {
-            int magicPowerAmp = random.Next(5, 7); // <-- because magic is strong, power multiplies
-            return random.Next(Atk - 1, Atk + 2) * magicPowerAmp;
+            int magicPowerAmp = random.Next(10, 20); // <-- because magic is strong, power adds.
+            return random.Next(Atk - 1, Atk + 2) + magicPowerAmp;
         }
 
         public override int OnSuccessfulHit(int baseDamage)
@@ -147,7 +147,6 @@ namespace ConsoleRPGAdventure
             return enemyDamage;
         }
     }
-
 
 
     public class Admin : Player // <-- Best Class, super OP (testing only)
