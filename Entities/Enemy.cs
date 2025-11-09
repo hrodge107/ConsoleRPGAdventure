@@ -83,7 +83,7 @@ namespace ConsoleRPGAdventure
 
     public class Treant : Enemy
     {
-        public Treant() : base(EntityImage.Treant, "Treant", 15, (2, 4), (150, 200), (2, 3), (10, 12), 15) { }
+        public Treant() : base(EntityImage.Treant, "Treant", 15, (2, 4), (150, 200), (2, 3), (10, 12), 5) { }
     }
 
     public class SnakeWithLegs : Enemy
@@ -120,32 +120,32 @@ namespace ConsoleRPGAdventure
     #region Mountain Monsters
     public class Yeti : Enemy
     {
-        public Yeti() : base(EntityImage.Yeti, "Yeti", 25, (4, 7), (120, 150), (2, 4), (7, 8), 10) { }
+        public Yeti() : base(EntityImage.Yeti, "Yeti", 45, (4, 7), (120, 150), (2, 4), (7, 8), 10) { }
     }
 
     public class Gryphon : Enemy
     {
-        public Gryphon() : base(EntityImage.Gryphon, "Gryphon", 30, (4, 5), (70, 100), (1, 3), (5, 10), 25) { }
+        public Gryphon() : base(EntityImage.Gryphon, "Gryphon", 40, (4, 5), (70, 100), (1, 3), (5, 10), 10) { }
     }
 
     public class Raptor : Enemy
     {
-        public Raptor() : base(EntityImage.Raptor, "Raptor", 30, (6, 7), (100, 120), (2, 4), (10, 15), 20) { }
+        public Raptor() : base(EntityImage.Raptor, "Raptor", 35, (6, 7), (100, 120), (2, 4), (10, 15), 10) { }
     }
 
     public class Godzilla : Enemy
     {
-        public Godzilla() : base(EntityImage.Godzilla, "Mini Kaiju", 25, (1, 10), (60, 80), (1, 2), (4, 7), 30) { }
+        public Godzilla() : base(EntityImage.Godzilla, "Mini Kaiju", 35, (1, 10), (60, 80), (1, 2), (4, 7), 15) { }
     }
 
     public class Minotaur : Enemy
     {
-        public Minotaur() : base(EntityImage.Minotaur, "Minotaur", 40, (6, 12), (60, 70), (1, 2), (5, 10), 150) { }
+        public Minotaur() : base(EntityImage.Minotaur, "Minotaur", 40, (6, 12), (60, 70), (1, 2), (5, 10), 50) { }
     }
 
     public class Bear : Enemy
     {
-        public Bear() : base(EntityImage.Bear, "Lord of the Mountain", 88, (10, 12), (60, 70), (1, 3), (15, 25), 200) { }
+        public Bear() : base(EntityImage.Bear, "Kuma", 88, (10, 12), (60, 70), (1, 3), (15, 25), 100) { }
     }
     #endregion
 
@@ -163,7 +163,7 @@ namespace ConsoleRPGAdventure
 
     public class Minion : Enemy
     {
-        public Minion() : base(EntityImage.Minion, "Minion", 22, (5, 7), (50, 70), (1, 1), (3, 5), 20) { }
+        public Minion() : base(EntityImage.Minion, "Minion", 35, (5, 7), (50, 70), (1, 1), (3, 5), 20) { }
     }
 
     public class DragonKnight : Enemy
